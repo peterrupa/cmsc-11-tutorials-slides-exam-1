@@ -1,0 +1,287 @@
+@font-face {
+    font-family: theBoldFont;
+    src: url(../font/theboldfont_0.ttf);
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+p {
+  line-height: 1.2em;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    font-family: 'theBoldFont', sans-serif;
+    background: #1D4851;
+    font-weight: 200;
+    min-height: 740px;
+}
+
+/*
+    Now let's bring some text styles back ...
+*/
+b, strong { font-weight: bold }
+i, em { font-style: italic }
+
+/*
+    ... and give links a nice look.
+*/
+a {
+    color: inherit;
+    text-decoration: none;
+    padding: 0 0.1em;
+    background: rgba(255,255,255,0.5);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
+    border-radius: 0.2em;
+
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+a:hover,
+a:focus {
+    background: rgba(255,255,255,1);
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
+}
+
+.step {
+    position: relative;
+    width: 1000px;
+    padding: 20px;
+    margin: 20px auto;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+
+    font-family: 'theBoldFont', sans-serif;
+    font-size: 48px;
+    line-height: 1.5;
+}
+
+.impress-enabled .step {
+    margin: 0;
+    opacity: 0.1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+
+.impress-enabled .step.active { opacity: 1 }
+
+.slide {
+    display: block;
+
+    width: 900px;
+    height: 700px;
+    padding: 40px 60px;
+
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+
+    color: rgb(102, 102, 102);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+
+    font-family: 'theBoldFont', Arial, sans-serif;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -1px;
+}
+
+.slide q {
+    display: block;
+    font-size: 50px;
+    line-height: 72px;
+
+    margin-top: 100px;
+}
+
+.slide q strong {
+    white-space: nowrap;
+}
+
+.overview { display: none }
+
+.impress-on-overview .step {
+    opacity: 1;
+    cursor: pointer;
+}
+.impress-enabled          { pointer-events: none }
+.impress-enabled #impress { pointer-events: auto }
+
+.center {
+  text-align: center;
+}
+
+.code {
+  font-family: 'Courier New';
+}
+
+.header {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+} 
+
+.container { 
+    display: table;
+    padding: 30px;
+}
+
+.container-center {
+    display: flex;
+    justify-content: center;
+}
+
+.box-bg {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    z-index: -1;
+    transform: rotate(45deg);
+}
+
+.box {
+    width: 500px;
+    height: 500px;
+}
+
+.box .answer {
+    margin-top: 50px;
+}
+
+.box .answer-letter {
+    margin-top: 40px;
+    font-size: 500%;
+    line-height: 1em;
+}
+
+.red {
+    background: #D13F4A;
+    color: white;
+}
+
+.yellow {
+    background: #F9C82D;
+    color: #010101;
+}
+
+.blue {
+    background: #33516D;
+    color: white;
+}
+
+.dark-blue {
+    background: #28324E;
+    color: white;
+}
+
+.green {
+    background: #41A85F;
+    color: white;
+}
+
+#background {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #1D4851;
+}
+
+#lower-color {
+    background: #00796B;
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    top: 77%;
+    left: -30%;
+    transform: rotate(29deg);
+}
+
+.question {
+    font-size: 80%;
+    margin-bottom: 200px;
+}
+
+.choices {
+    margin-bottom: 0;
+    bottom: 0;
+    float: bottom;
+    display : table-row;
+    vertical-align : bottom;
+    height : 1px;
+    font-size: 90%;
+}
+
+.left {
+    float: left;
+    width: 50%;
+}
+
+.right {
+    float: left;
+    width: 50%;
+}
+
+.indent-1 {
+    margin-left: 10%;
+}
+
+.fixed-height {
+    height: 600px;
+}
